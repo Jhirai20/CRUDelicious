@@ -1,0 +1,48 @@
+@model Dish
+<div class="container-fluid">
+<div asp-validation-summary='All'></div>
+    <div class="row justify-content-center">
+        <h2 class="lead-2"> Add a new Dish!</h2>
+    </div>
+    <div class="row">
+        <p class="AddDish"><a  asp-controller="Home" asp-action="Index" class="streched-link">Home</a>
+    </div>
+    <form action="create" method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-1-12">
+                <div class="form-group">
+                    <label asp-for="Chef" for="">Chef's Name</label>
+                    <input asp-for="Chef" type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" for="">Name of Dish</label>
+                    <input asp-for="Name" type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label asp-for="Calories" for=""># of Calories</label>
+                    <input asp-for="Calories" type="number" class="form-control" >
+                </div>
+            </div>
+            <div class="col-md-1-12">
+                <div class="form-group">
+                    <label asp-for="Tastiness">Tastiness</label>
+                    <select asp-for="Tastiness" type="number" class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-1-12">
+                <div class="form-group">
+                    <label asp-for="Description" for="">Description</label>
+                    <textarea asp-for="Description" type="text" class="form-control" rows="6"></textarea>
+                    <button type="submit" class="btn btn-primary">Add Dish</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

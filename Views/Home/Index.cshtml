@@ -1,0 +1,22 @@
+﻿<div class="container-fluid">
+    <div class="row  justify-content-center">
+        <div class="col-lg-1-12">
+            <h1 class="display-4">Welcome to CRUDelicious!</h1>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col"><p class="lead-1">Check out some recent dishes!</p><hr></div>
+            <div class="col"> <p class="AddDish"><a href="/new" class="streched-link">Add a Dish</a></p></div>
+        </div>
+    <div class="row">
+         <div class="col">
+            @model List<Dish> 
+            <div class="list-group">
+            @foreach(var item in Model)
+            {
+                <p style="transform: rotate(0);"> <a href="@item.DishId" class="stretched-link">@item.Name</a> by @item.Chef </p>
+            }
+            </div>
+         </div>
+    </div>
+</div>

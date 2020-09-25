@@ -1,0 +1,31 @@
+@model Dish
+<div class="container-fluid">
+    <div class="row">
+        <p class="AddDish"><a asp-controller="Home" asp-action="Index" class="streched-link">Home</a>
+    </div>
+    <div class="row justify-content-center">
+        <h2>@Model.Name</h2>
+    </div>
+    <div class="row justify-content-center">
+        <h3>by @Model.Chef</h3>
+    </div>
+    <hr>
+    <div class="row">
+        <p>@Model.Description</p>
+    </div>
+    <div class="row">
+        <h6 for="">Calories: </h6> <p>  @Model.Calories</p>
+    </div>
+    <div class="row">
+        <h6 for="">Tastiness: </h6> <p>  @Model.Tastiness</p>
+    </div>
+    <div class="row">
+        <div class="col-md-1-12">
+            <a style="margin-right: 10px;" class="btn btn-danger" href="delete/@Model.DishId" role="button">Delete</a>
+        </div>
+        <div class="col-md-1-12">
+            <a class="btn btn-secondary" href="edit/@Model.DishId" role="button">Edit</a>
+        </div>
+    </div>
+
+</div>
